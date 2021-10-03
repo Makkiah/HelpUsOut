@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Help Us Out!
+    </title>
+    <meta name="description" content="Help Us Out! Donate $50 to our charity for a good cause."/>
+    <meta name="keywords" content="help, us, out, $50, donate, charity, good, cause"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <h1>Help Us Out!</h1>
+    </divs>
+    <div id="container">        
+        <div id="progWrap">
+            <div id="progress">
+                <div class="tooltip" >
+                <p class="tooltipText">We need $<span id="mnyToGo"></span> more to reach our goal!</p>
+                </div>
+            </div>
+        </div>
+        <div id="boxContent">
+            <!-- The text before the donation input. -->
+            <p id="reminder">
+                <span id="orngTxt">Only 3 days left</span> to reach $5000.
+            </P>
+            </br>
+            <p id="description">
+                Join the <span id="donorCount"></span> other donors who are helping make a positive impact in the community. Every dollar helps and we can't thank everyone enough.
+            </p>
+            <!-- Donation area that controls the progress bar. -->
+            <div id="donationField">
+                <h2 id="dollar">$</h2>
+                <input type="number" id="donateAmt" min="0"/>
+                <button id="donateBttn" class="bttn" onclick="handleDonate()">
+                    Donate Now
+                </button>
+                    <div class="donWrap">
+                        <span class="donationText" id="donText">Thank you for donating to our cause!</span>
+                    </div>
+            </div>
+            <!-- Why donate $50? -->
+            <div id="whyBox">
+                <div id="why" onmouseover="popFunc()">Why donate $50?
+                    <div class="popupWrap">
+                        <span class="popupText" id="popText">Along with our $5000 goal, we're also aiming for a certain amount of donors.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Donor retention buttons-->
+        <div id="retentionBttns">
+            <button id="saveBttn" class="bttn retBttn" title="Save Button">Save for Later</button>
+            <button id="tellFrnd" class="bttn retBttn" title="Tell Friend">Tell A Friend</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

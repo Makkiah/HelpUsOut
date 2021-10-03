@@ -1,0 +1,346 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: #f1f1f1;
+    margin-top:7vh;
+}
+
+#header h1{
+    color: #194968; 
+    text-align: center; 
+    font-size:40px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+
+}
+
+#container {
+    width: 400px;
+    height:430px;
+    
+    margin:auto;
+    font-family: 'Roboto', sans-serif, Arial;
+    font-weight: 500;
+}
+@media only screen and (max-width: 540px) {
+    #container {
+      width: 300px;
+      height: 500px;
+    }
+}
+
+/*Progress bar*/
+#progWrap {
+    width:auto;
+    height: 20px;
+    border-radius: 6px 6px 0px 0px;
+    float:center;
+    overflow: hidden;
+    background-color: #dee0e0;
+    box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+}
+
+#progress {
+    /*The width of this object controls the orange progress.*/
+    width: 70%; 
+    float: center;
+    border-radius: 6px 0px 0px 0px;
+    height: 20px;
+    background: #ea7324; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-90deg, #f89c5f, #ea7324); 
+    background: -moz-linear-gradient(-90deg, #f89c5f , #ea7324); 
+    background: linear-gradient(-90deg, #f89c5f, #ea7324); 
+    z-index: 333;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    transition: .5s;
+}
+.tooltip {
+    position: absolute;
+    display: inline-block;
+    width: 400px;
+    height: 20px;
+    z-index: 1;
+}
+/*Arrow*/
+.tooltipText:after {
+    content: " ";
+    position: absolute;
+    right: 106px; /* Moves arrow */
+    bottom: -10px;
+    border-top: 15px solid #194968;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: none;
+}
+  
+/* Tooltip text */
+.tooltip .tooltipText {
+    visibility: hidden;
+    width: 380px;
+    height: auto;
+    background-color: #194968;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    justify-content: center;
+    padding: 20px 10px;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 150%;
+    z-index: 1;
+}
+@media only screen and (max-width: 540px) {
+    .tooltip .tooltipText {
+      width: 280px;
+    }
+    .tooltipText:after{
+        right: 76px;
+    }
+}
+/* Show the tooltip text when you hover over the tooltip container */
+.tooltip:hover .tooltipText {
+    visibility: visible;
+}
+
+
+/*Content*/
+#boxContent{
+    width:auto;
+    height:60%;
+    padding: 30px 25px;
+    background-color: white;
+    border-radius: 0px 0px 6px 6px;
+    margin:auto;
+}
+
+#reminder{
+   font-weight: 600; 
+   color:#656668;
+}
+
+#orngTxt{
+    color: #ea7324;
+}
+
+#description{
+    font-size: 17px;
+    color:#656668;
+    line-height:1.8rem;
+    letter-spacing: .1rem; 
+}
+
+#donorCount{
+    font-weight: 600;
+}
+
+.bttn{
+    font-size: 15px; 
+    font-weight: bold;
+    height:55px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px #d4d4d4 solid;
+}
+.bttn:hover{
+    cursor: pointer;
+}
+
+
+#donationField{
+    margin-top: 15px;
+}
+
+#dollar{
+    float:left; 
+    font-size: 25px;
+    padding-top: 13px; 
+    margin-right:6px; 
+    font-weight: lighter;
+}
+@media only screen and (max-width: 540px) {
+    #dollar {
+      padding-top: 5px;
+    }
+}
+
+#donateAmt{
+    float:left; 
+    width: 130px; 
+    height:50px; 
+    font-size:25px;
+    margin-right: 20px; 
+    border-radius: 6px;
+    border: 1px #8f9193 solid;
+    padding-left: 10px;
+}
+@media only screen and (max-width: 540px) {
+    #donateAmt {
+      width: 85px;
+      height: 35px;
+    }
+}
+
+#donateBttn{
+    float:left; 
+    color: white;
+    background-color: #93b811; 
+    margin-bottom:25px; 
+    margin-left:10px;
+    width: 150px;
+    height: 50px;
+    border: 0px;
+}
+@media only screen and (max-width: 540px) {
+    #donateBttn {
+      width: 100px;
+      height: 37px;
+      margin-left:0px;
+      font-size: 13px;
+      padding: 10px;
+    }
+}
+#donateBttn:hover {
+    background-color: #6f8815; 
+    transition-duration: .25s;
+}
+
+/* Popup text */
+.donationText {
+    width: 160px;
+    background-color: #93b811;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 8px 8px;
+    position: absolute;
+    z-index: 1;
+    left: 52%;
+    bottom: 50%;
+}
+@media only screen and (max-width: 540px) {
+    .donationText {
+        left: 45%;
+        bottom: 40%;
+    }
+}
+  
+/* Popup arrow */
+.donationText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #93b811 transparent transparent transparent;
+}
+.donWrap {
+    visibility: hidden;
+}
+/* Hide and show the popup */
+.donWrap .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+
+#whyBox{
+    float:left;
+    cursor: pointer;
+}
+
+/* Popup container */
+#why {
+    position: relative;
+    display: inline-block;
+    color:#119bd3;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+}
+  
+/* Popup text */
+#whyBox .popupText {
+    width: 160px;
+    background-color: #194968;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+  
+/* Popup arrow */
+#whyBox .popupText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #194968 transparent transparent transparent;
+}
+.popupWrap {
+    visibility: hidden;
+}
+.popupWrap .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+/* Fade in */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+  
+#retentionBttns{
+    margin:auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.retBttn{
+    background-color: #e4e4e4;
+    color:#8f9193;
+    width: 180px;
+    justify-content: center;
+}
+@media only screen and (max-width: 540px) {
+    .retBttn {
+      width: 130px;
+      height: 40px;
+    }
+}
+.retBttn:hover {
+    background-color: #c2c2c2;
+    color: white;
+    transition-duration: .25s;
+}
+
+
+#saveBttn{
+    margin-right: 20px;
+    float:left;
+}
+
+#tellFrnd{
+    margin-left: 20px;
+    float:right;
+}
