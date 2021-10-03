@@ -219,8 +219,8 @@ body{
     padding: 8px 8px;
     position: absolute;
     z-index: 1;
-    left: 40%;
-    bottom: 59%;
+    left: 0%;
+    bottom: 0%;
 }
 @media only screen and (max-width: 540px) {
     .donationText {
