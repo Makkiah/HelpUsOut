@@ -221,6 +221,7 @@ body{
     left: 50%;
     bottom: 53%;
     position: absolute;
+    margin-bottom: 25px;
 }
 @media only screen and (max-width: 540px) {
     .donationText {
